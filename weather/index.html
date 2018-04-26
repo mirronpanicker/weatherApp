@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="css/screen.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="scripts/controllers/weather.js"></script>
+</head>
+<div >
+
+<div ng-app="weatherApp" class="ng-scope" ng-controller="weather">
+<div class="outer">
+    <div class="panels" ng-hide="!showResults" >
+        <div ng-repeat="day in nn">
+            <p ng-hide="!day.isFirst" class="city">{{day.city}}</p>
+            <p class="dayName">{{day.name}}</p>
+            <img src="{{day.icon_url}}" />
+            <p class="temperature">{{day.temperature}}&deg;</p>
+            <p class="desc" ngHide="day.isFirst">{{day.description}}</p>
+        </div>
+    </div>
+    <div class="panels" ng-hide="!showResults" >
+        <div ng-repeat="day in nn1">
+            <p ng-hide="!day.isFirst" class="city">{{day.city}}</p>
+            <p class="dayName">{{day.name}}</p>
+            <img src="{{day.icon_url}}" />
+            <p class="temperature">{{day.temperature}}&deg;</p>
+            <p class="desc" ngHide="day.isFirst">{{day.description}}</p>
+        </div>
+    </div>
+    <div class="panels" ng-hide="!showResults" >
+        <div ng-repeat="day in nn2">
+            <p ng-hide="!day.isFirst" class="city">{{day.city}}</p>
+            <p class="dayName">{{day.name}}</p>
+            <img src="{{day.icon_url}}" />
+            <p class="temperature">{{day.temperature}}&deg;</p>
+            <p class="desc" ngHide="day.isFirst">{{day.description}}</p>
+        </div>
+    </div>
+    <div class="panels" ng-hide="!showResults" >
+        <div ng-repeat="day in nn3">
+            <p ng-hide="!day.isFirst" class="city">{{day.city}}</p>
+            <p class="dayName">{{day.name}}</p>
+            <img src="{{day.icon_url}}" />
+            <p class="temperature">{{day.temperature}}&deg;</p>
+            <p class="desc" ngHide="day.isFirst">{{day.description}}</p>
+        </div>
+    </div>
+
+        <div class="zip">
+            <button ng-click="setForecast()">Click to See 10 days Forecast</button>
+        </div>
+
+
+<!--</div>-->
+
+    <div class="weatheroutline">
+        <img src="{{weather1.icon_url}}" />
+        <h2 class="city">City: {{weather1.city}}</h2>
+        <h2>State: {{weather1.name}}</h2>
+        <h2>Temperature: {{weather1.temp}} F</h2>
+        <h2>Wind: {{weather1.wind}} MPH</h2>
+        <h2>Condition: {{weather1.icon}}</h2>
+        <h2>Feels Like: {{weather1.feels_like}} F</h2>
+
+    </div>
+
+    <div class="weatheroutline">
+
+    <!--<div class="weather2">-->
+        <img src="{{weather2.icon_url}}" />
+        <h2>City: {{weather2.city}}</h2>
+        <h2>State: {{weather2.name}}</h2>
+        <h2>Temperature: {{weather2.temp}} F</h2>
+        <h2>Wind: {{weather2.wind}} MPH</h2>
+        <h2>Condition: {{weather2.icon}}</h2>
+        <h2>Feels Like: {{weather2.feels_like}} F</h2>
+
+    </div>
+
+    <div class="weatheroutline">
+    <img src="{{weather3.icon_url}}" />
+    <h2>City: {{weather3.city}}</h2>
+    <h2>State: {{weather3.name}}</h2>
+    <h2>Temperature: {{weather3.temp}} F</h2>
+    <h2>Wind: {{weather3.wind}} MPH</h2>
+    <h2>Condition: {{weather3.icon}}</h2>
+    <h2>Feels Like: {{weather3.feels_like}} F</h2>
+    </div>
+
+    <div class="weatheroutline">
+    <img src="{{weather4.icon_url}}" />
+    <h2>City: {{weather4.city}}</h2>
+    <h2>State: {{weather4.name}}</h2>
+    <h2>Temperature: {{weather4.temp}} F</h2>
+    <h2>Wind: {{weather4.wind}} MPH</h2>
+    <h2>Condition: {{weather4.icon}}</h2>
+    <h2>Feels Like: {{weather4.feels_like}} F</h2>
+    </div>
+
+    </div>
+
+</div>
+
+    <footer><span>Created by Mirron Panicker</span></footer>
+
+</div>
+</body>
+</html>
